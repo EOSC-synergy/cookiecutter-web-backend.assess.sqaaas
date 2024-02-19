@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-taupe-crab.sh
-        container: qc.acc_lumpy-champagne-wallaby
+        - /usr/bin/env sh .sqa/script.slaphappy-flax-dachsbracke.sh
+        container: qc.acc_ready-chocolate-alligator
   QC.Doc:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-smalt-zebra.sh
-        container: qc.doc_ready-gold-barb
+        - /usr/bin/env sh .sqa/script.randy-cerulean-harrier.sh
+        container: qc.doc_cloudy-chestnut-kudu
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-mustard-cougar.sh
-        container: qc.doc_fuzzy-razzmatazz-mau
+        - /usr/bin/env sh .sqa/script.cozy-brass-uguisu.sh
+        container: qc.doc_slimy-fuchsia-wombat
   QC.Lic:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-tangerine-panda.sh
-        container: qc.lic_gummy-coral-axolotl
+        - /usr/bin/env sh .sqa/script.cloudy-cerulean-oyster.sh
+        container: qc.lic_paltry-vermilion-flamingo
   QC.Ver:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-chocolate-seal.sh
-        container: qc.ver_stinky-tan-weasel
+        - /usr/bin/env sh .sqa/script.freaky-taupe-blue.sh
+        container: qc.ver_lousy-flax-cassowary
 timeout: 5400
