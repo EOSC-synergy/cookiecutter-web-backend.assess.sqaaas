@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend:
+      branch: main
+      repo: https://codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-malachite-dalmatian.sh
+        container: qc.acc_beady-flax-bonobo
+  QC.Doc:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-violet-lemur.sh
+        container: qc.doc_jumpy-tangerine-mist
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-cardinal-wolverine.sh
+        container: qc.doc_clammy-lilac-chicken
+  QC.Lic:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-mauve-coyote.sh
+        container: qc.lic_pasty-tangerine-bandicoot
+  QC.Ver:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-harlequin-oriole.sh
+        container: qc.ver_foggy-linen-hound
+timeout: 5400
