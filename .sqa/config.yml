@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-mustard-sheepdog.sh
-        container: qc.acc_flaky-ivory-maltese
+        - /usr/bin/env sh .sqa/script.pokey-corn-caiman.sh
+        container: qc.acc_zippy-periwinkle-hummingbird
   QC.Doc:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-firebrick-greyhound.sh
-        container: qc.doc_foggy-white-cattle
+        - /usr/bin/env sh .sqa/script.skimpy-chestnut-chow.sh
+        container: qc.doc_lousy-russet-grouse
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-crimson-pig.sh
-        container: qc.doc_squeaky-carmine-caiman
+        - /usr/bin/env sh .sqa/script.freaky-chestnut-mammoth.sh
+        container: qc.doc_zippy-charcoal-baboon
   QC.Lic:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-denim-booby.sh
-        container: qc.lic_craggy-silver-starfish
+        - /usr/bin/env sh .sqa/script.wiggy-persimmon-foxhound.sh
+        container: qc.lic_hasty-xanthic-grouse
   QC.Ver:
     repos:
       codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-celadon-armadillo.sh
-        container: qc.ver_paltry-sapphire-flounder
+        - /usr/bin/env sh .sqa/script.squirrely-champagne-nightingale.sh
+        container: qc.ver_smelly-vermilion-yak
 timeout: 5400
