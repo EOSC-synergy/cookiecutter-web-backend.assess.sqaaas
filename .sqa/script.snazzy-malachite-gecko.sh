@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/m-team-kit/cookiecutter-web-backend &&
-    git rev-parse --is-inside-work-tree
+cd codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend &&
+    cat codemeta.json
 )

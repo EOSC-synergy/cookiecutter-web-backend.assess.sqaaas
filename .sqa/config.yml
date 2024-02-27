@@ -1,42 +1,82 @@
 config:
   credentials: []
   project_repos:
+    codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend:
+      branch: main
+      repo: https://codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: feature/fair-epos-prototype
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/m-team-kit/cookiecutter-web-backend:
-      branch: main
-      repo: https://github.com/m-team-kit/cookiecutter-web-backend
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/m-team-kit/cookiecutter-web-backend git:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-cyan-coral.sh
-        container: qc.acc_grumpy-turquoise-ray
+        - /usr/bin/env sh .sqa/script.smelly-azure-monster.sh
+        container: qc.acc_hazy-jade-seal
   QC.Doc:
     repos:
-      github.com/m-team-kit/cookiecutter-web-backend find_doc_files.py:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-chestnut-sponge.sh
-        container: qc.doc_lumpy-lilac-spaniel
-      github.com/m-team-kit/cookiecutter-web-backend git:
+        - /usr/bin/env sh .sqa/script.dorky-cinnabar-wallaby.sh
+        container: qc.doc_blurry-taupe-indri
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-aqua-cheetah.sh
-        container: qc.doc_boozy-amber-macaw
+        - /usr/bin/env sh .sqa/script.leaky-white-gecko.sh
+        container: qc.doc_foggy-cinnabar-pinscher
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-fuchsia-hyrax.sh
+        container: qc.doc_nerdy-maroon-kakapo
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-orange-beagle.sh
+        container: qc.doc_geeky-harlequin-whale
   QC.Lic:
     repos:
-      github.com/m-team-kit/cookiecutter-web-backend licensee:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-ivory-emu.sh
-        container: qc.lic_hilly-beige-whippet
+        - /usr/bin/env sh .sqa/script.goopy-lilac-dragonfly.sh
+        container: qc.lic_cloudy-harlequin-quoll
+  QC.Met:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-smalt-tamarin.sh
+        container: qc.met_muggy-razzmatazz-catfish
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-malachite-gecko.sh
+        container: qc.met_stinky-corn-peccary
+  QC.Sec:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-lavender-whippet.sh
+        container: qc.sec_wiggy-zucchini-sheep
+  QC.Sty:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-myrtle-caiman.sh
+        container: qc.sty_cranky-periwinkle-orangutan
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-silver-penguin.sh
+        container: qc.sty_wimpy-azure-malamute
+  QC.Uni:
+    repos:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-denim-badger.sh
+        container: qc.uni_flimsy-salmon-dolphin
   QC.Ver:
     repos:
-      github.com/m-team-kit/cookiecutter-web-backend get_git_tags.py:
+      codebase.helmholtz.cloud/m-team/ai/cookiecutter-web-backend get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-jade-eleuth.sh
-        container: qc.ver_lanky-periwinkle-kiwi
+        - /usr/bin/env sh .sqa/script.slimy-auburn-lemur.sh
+        container: qc.ver_leaky-puce-tzu
 timeout: 5400
